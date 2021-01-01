@@ -1,1 +1,1 @@
-web: gunicorn labuena.wsgi --log-file -
+web: gunicorn labuena.labuena.wsgi --log-file -
