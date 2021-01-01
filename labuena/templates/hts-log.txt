@@ -1,0 +1,30 @@
+HTTrack3.49-2 launched on Fri, 01 Jan 2021 09:30:27 at https://labuenavidaproject.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w https://labuenavidaproject.com/ -O "/home/ace/websites/labuena" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+09:36:46	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/images/checkr.png (from https://labuenavidaproject.com/)
+09:36:46	Warning: 	HTML file (75673 bytes) retransferred due to lack of cache: https://labuenavidaproject.com/testimonies/index.php
+09:36:47	Warning: 	HTML file (17996 bytes) retransferred due to lack of cache: https://labuenavidaproject.com/gallery/index.php
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/submenu.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/menu-divider.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/close.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/pattern2.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/grid.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/pattern.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/parallax/parallax-bg.jpg (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/iconalt.svg (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/images/page/floral-banner.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/preloader.gif (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/play.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/dotted.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/widget-comment.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/css/images/icons/widget-link.png (from https://labuenavidaproject.com/css/style.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/images/pattern2.png (from https://labuenavidaproject.com/css/dark.css)
+09:36:48	Error: 	"Not Found" (404) at link https://labuenavidaproject.com/POST (from https://connect.facebook.net/en_US/fbevents.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 6 minutes 21 seconds : 277 links scanned, 259 files written (38915001 bytes overall) [39009630 bytes received at 102387 bytes/sec], 143774 bytes transferred using HTTP compression in 4 files, ratio 26%, 6.8 requests per connection
+(17 errors, 2 warnings, 0 messages)
