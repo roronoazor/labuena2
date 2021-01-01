@@ -1,0 +1,1 @@
+web: gunicorn labuena.wsgi --log-file -
