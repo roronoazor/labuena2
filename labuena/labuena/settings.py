@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ["127.0.0.1", "labuena2.herokuapp.com"]
 
 INSTALLED_APPS = [
     #'labuena.core',
-    "labuena.core",
+    "core",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
