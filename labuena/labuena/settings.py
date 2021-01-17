@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["127.0.0.1", "labuena2.herokuapp.com"]
 # Application definition
 
 INSTALLED_APPS = [
-    # 'core',
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,13 +79,18 @@ WSGI_APPLICATION = 'labuena.wsgi.application'
 
 
 
+db = "prod"
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if db == "local":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = dict()
+    DATABASES['default'] = dj_database_url.config()
 
 
 # Password validation
@@ -133,3 +138,5 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+handler404 = 'core.views.handler404'

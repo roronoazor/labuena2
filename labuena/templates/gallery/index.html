@@ -218,7 +218,35 @@
                                     <div class="fbox-icon bg-transparent">
                                         <a href="#"><i class="icon-phone3"></i></a>
                                     </div>
-                                    <h3>Contact Us<span class="subtitle">Get back to the partner who connected you to this website</span></h3>
+                                    <h3>To join our Whatsapp Group</h3>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click Here</button>
+
+                                    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Whatsapp Contact</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="whatsapp">
+  <div class="form-group">
+    <label for="exampleInputName">Name</label>
+    <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputWhatsapp">Whatsapp Contact</label>
+    <input type="text" class="form-control" id="exampleInputWhatsapp" placeholder="whatsapp contact">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
                                 </div>
                             </div>
 
@@ -319,6 +347,57 @@
                     filter: selector
                 });
                 return false;
+            });
+
+
+       //function to get the csrf_token key
+       function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+
+            // this is the form data
+            $( "#whatsapp" ).submit(function( event ) {
+              console.log("this man na odonyo");
+              event.preventDefault();
+              const csrftoken = getCookie('csrftoken');
+              console.log(csrftoken);
+              if ( $( "input:first" ).val().length == 0  ||  $( "input:last" ).val().length == 0 ){
+                    alert("please fill all fields");
+              } else {
+                let name = $( "input:first" ).val()
+              let contact = $( "input:last" ).val()
+              console.log("jamse")
+
+              // at this point we get our data and then push to the server
+              // we make an ajax post call
+              let base_url = window.location.origin
+              let postfix = "/app/"
+
+              let target = base_url + postfix
+
+            $.ajax({
+                  type: "POST",
+                  url: target,
+                  headers: {"X-CSRFToken": csrftoken},
+                  data: {"name": name, "contact": contact},
+                  success: function(){alert("thank you, success"); $("#exampleModal").modal('hide');},
+                  dataType: "json"
+                });
+              }
+
             });
 
         });
