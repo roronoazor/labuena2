@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'labuena.urls'
+ROOT_URLCONF = 'labuena.labuena.urls'
 
 TEMPLATES = [
     {
