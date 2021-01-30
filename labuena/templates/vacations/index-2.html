@@ -281,10 +281,10 @@
 
                     <div id="section-contact" class="divider divider-short divider-center topmargin-md"><i class="icon-star3"></i></div>
 
-                    <div class="heading-block title-center  dark">
-                        <h2>Get in Touch with us</h2>
-                        <span>Still have Questions? Contact us through the channels below.</span>
-                    </div>
+<!--                    <div class="heading-block title-center  dark">-->
+<!--                        <h2>Get in Touch with us</h2>-->
+<!--                        <span>Still have Questions? Contact us through the channels below.</span>-->
+<!--                    </div>-->
 
                     <div class="container clearfix">
 
@@ -305,8 +305,9 @@
                                     <div class="fbox-icon bg-transparent">
                                         <a href="#"><i class="icon-phone3"></i></a>
                                     </div>
-                                    <h3>To join our Whatsapp Group</h3>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click Here</button>
+                                    <h3><a id="whatsapp-link" href="https://chat.whatsapp.com/KuNTz08Oeq84mgLNyN3CJ2"></a></h3>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click Here to Secure Your Reservations</button>
+
 
                                     <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -478,7 +479,7 @@
                   url: target,
                   headers: {"X-CSRFToken": csrftoken},
                   data: {"name": name, "contact": contact},
-                  success: function(){alert("thank you, success"); $("#exampleModal").modal('hide');},
+                  success: function(){alert("thank you, you will be redirected to join our whatsapp group"); document.getElementById("whatsapp-link").click();},
                   dataType: "json"
                 });
               }
